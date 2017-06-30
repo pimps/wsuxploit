@@ -54,7 +54,8 @@ build () {
 	sed s/TARGET_IP/$IPADDR/ < $SCRIPT_DIR/resources/script.bgi > /tmp/payloads/script.bgi
 	sed s/TARGET_IP/$IPADDR/ < $SCRIPT_DIR/resources/script.vbs > /tmp/payloads/script.vbs
 	sed s/TARGET_IP/$IPADDR/ < $SCRIPT_DIR/resources/payloads.ini > $SCRIPT_DIR/wsuspect-proxy/payloads/payloads.ini
-    cp $SCRIPT_DIR/resources/BgInfo.exe $SCRIPT_DIR/wsuspect-proxy/payloads/.
+        cp $SCRIPT_DIR/resources/BgInfo.exe $SCRIPT_DIR/wsuspect-proxy/payloads/.
+	cp $SCRIPT_DIR/resources/PsExec.exe $SCRIPT_DIR/wsuspect-proxy/payloads/.
 	chmod -R 777 /tmp/payloads/*
 	service smbd restart
 }
