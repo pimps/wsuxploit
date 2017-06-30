@@ -93,6 +93,6 @@ echo "[*] Set iptables rules for SYN packets..."
 
 set_iptables A 2> /dev/null 1>&2
 
-echo "[*] Running WSUSuspect proxy..."
+echo "[*] Running WSUSpect proxy..."
 cd $SCRIPT_DIR/wsuspect-proxy
-python wsuspect_proxy.py bginfo 9090
+python wsuspect_proxy.py psexec 9090
