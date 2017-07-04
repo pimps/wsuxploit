@@ -32,7 +32,7 @@ Clone this repository and the WSUSpect Proxy repository. You can do it by runnin
 git clone https://github.com/pimps/wsuxploit.git
 
 # enter on wsuxploit directory
-cd wsusxploit
+cd wsuxploit
 
 # clone WSUSpect Proxy repository
 git clone https://github.com/ctxis/wsuspect-proxy.git
