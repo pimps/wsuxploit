@@ -49,7 +49,7 @@ Discover the WSUS address inside of the network that you're attacking and verify
 If you already have access to a Domain Machine, you can easily get the address of the WSUS server executing the following command:
 
 ```
-reg query HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate /v WUServer
+reg query HKLM\Software\Policies\Microsoft\Windows \WindowsUpdate /v WUServer
 ```
 
 You should see a response similar to that:
